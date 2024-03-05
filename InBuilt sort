@@ -1,0 +1,33 @@
+import java.util.Arrays;
+import java.util.Collections;
+// Inbuilt Sorting
+public class Java {
+    public static void printArray(Integer array[]) {
+        for(int i=0; i<array.length; i++){
+            System.out.print(array[i]+" ");
+        }
+        System.out.println();
+     }
+    public static void main(String[] args) {
+       
+        Integer array [] = {1,3,2,5,4,6};
+
+       // Sorts the array in ascending order
+        Arrays.sort(array);
+        printArray(array);
+
+        // Sorts the array in Desending order
+        Arrays.sort(array, Collections.reverseOrder());
+        printArray(array);
+        System.out.println();
+
+        // Sorts the array of given range in desending order
+        Arrays.sort(array,0,4, Collections.reverseOrder());
+        printArray(array);
+        System.out.println();
+
+        // Sorts the array of given range in ascending order
+        Arrays.sort(array,0,3);
+        printArray(array);
+    }
+}
